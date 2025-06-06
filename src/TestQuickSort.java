@@ -27,8 +27,8 @@ public class TestQuickSort {
             //Se genera un arreglo aleatorio
             int[] arregloOriginal = generarArregloAleatorio(tamaño);
 
-            //##########################################################################################################
-            // Secuencial
+            //############################################Secuencial###################################################
+
             int[] arregloSecuencial = clonarArreglo(arregloOriginal);
             QuickSortSecuencial qss = new QuickSortSecuencial();
             long inicioSec = System.nanoTime();
@@ -38,8 +38,8 @@ public class TestQuickSort {
             System.out.println("Tiempo QuickSort Secuencial: " + tiempoSec + " ms");
 
 
-            //##########################################################################################################
-            // Fork/Join Concurrente
+            //################################Fork/Join Concurrente####################################################
+
             int[] arregloConcurrente = clonarArreglo(arregloOriginal);
             ForkJoinPool pool = new ForkJoinPool(); // Usa todos los núcleos disponibles, EN MI CASO 6 NUCLEOS
             QuickSortConcurrente tarea = new QuickSortConcurrente(arregloConcurrente, 0, arregloConcurrente.length - 1);

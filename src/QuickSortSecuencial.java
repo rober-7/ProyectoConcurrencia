@@ -38,7 +38,7 @@ public class QuickSortSecuencial {
         arreglo[j] = temp;
     }
 
-    // Método para imprimir el arreglo (útil para pruebas)
+    // Método para imprimir el arreglo
     public void imprimirArreglo(int[] arreglo) {
         for (int num : arreglo) {
             System.out.print(num + " ");
